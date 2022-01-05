@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import bg from './assest/Background.png'
+import './index.css'
+import LeftBar from "./component/leftBar";
+import Button from "./component/button";
+import Horoscope from "./component/Horoscope";
+import Dropdown from "./component/dropdown";
+import Switch from "./component/switch";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    const [show, setShow] = useState(true);
+    const [next, setNext] = useState(true)
+    return <div classNam='background'>
+        <div className='bg'>
+            <div className='horoscope'>HOROSCOPE</div>
+            <div className='float'>
+                <LeftBar show={show} setShow={setShow} />
+                <Button show={show} setShow={setShow} />
+            </div>
+            <div>
+                <Switch next={next} setNext={setNext} />
+            </div>
+
+        </div>
+
     </div>
-  );
 }
 
 export default App;

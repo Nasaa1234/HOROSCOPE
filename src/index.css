@@ -1,13 +1,359 @@
+/*
+
+.position {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+.inline {
+    display: inline-flex;
+}
+.margin {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.margin1 {
+    margin-left: 100px;
+    margin-top: 25px;
+}
+.color {
+    color: white;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;700&display=swap');
+* {
+    font-family: 'Lato';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: 300px;
+    margin-left: 650px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg {
+    width: 100vw;
+    background-image: url('./assest/Background.png');
+    height: 100vh;
+    background-size: cover;
+    float: left;
+}
+
+.checkTextCon {
+    display: flex;
+    height: 43px;
+    margin-top: 50px;
+}
+
+.background {
+    display: flex;
+}
+
+.textCon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.bigText:hover {
+    color: white;
+}
+
+.smallText:hover {
+    color: yellow;
+}
+
+.bigText {
+    color: #9499C3;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+
+.smallText {
+    color: rgba(148, 153, 195, 0.5);
+    font-size: 14px;
+    font-family: 'Lato';
+    cursor: pointer;
+}
+
+.checkIcon {
+    height: 24px;
+}
+
+.leftBar {
+    margin-left: 16px;
+    padding: 55px;
+    padding-top: 0px;
+    width: 300px;
+    height: 73%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Cabin {
+    display: inline-flex;
+    display: flex;
+}
+
+.cabin {
+    Font-style: Bold;
+    Font-size: 16px;
+    color: white;
+    padding: 20px;
+    border: 2px solid rgba(148, 153, 195, 0.5);
+    background-color: #1A1C48;
+    border-radius: 10px;
+    height: 2%;
+    margin-top: 130px;
+}
+
+.system {
+    margin-left: 71px;
+    background-color: #1A1C48;
+    Font-style: Bold;
+    Font-size: 16px;
+    margin-top: 170px;
+    color: white;
+    padding: 20px;
+    height: 2%;
+    border: 2px solid rgba(148, 153, 195, 0.5);
+    border-radius: 10px;
+}
+
+.cabin1 {
+    margin-top: 160px;
+    Font-style: Bold;
+    Font-size: 16px;
+    color: #1A1C48;
+    margin-left: -5px;
+    padding: 30px;
+    border: 2px solid rgba(148, 153, 195, 0.5);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.system1 {
+    margin-left: 5px;
+    margin-left: 71px;
+    margin-top: 120px;
+    background-color: white;
+    Font-style: Bold;
+    Font-size: 16px;
+    color: #1A1C48;
+    padding: 30px;
+    border: 2px solid rgba(148, 153, 195, 0.5);
+    border-radius: 10px;
+}
+
+.spaceX {
+    margin-top: 150px;
+}
+
+.horoscope {
+    font-size: 48px;
+    color: #9499C3;
+    text-align: center;
+    Line-height: 48px;
+    padding-top: 50px;
+}
+
+.SIGN {
+    font-size: 38px;
+    color: #9499C3;
+    text-align: center;
+    Font-family: Lato;
+    Line-height: 48px;
+    padding-bottom: 30px;
+}
+
+#cars {
+    background-color: white;
+    color: #4B87FB;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.float {
+    float: left;
+}
+
+.Sign {
+    grid-column-gap: 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Sign1 {
+    grid-column-gap: 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+}
+
+.Zurhai {
+    display: flex;
+    align-content: center;
+    width: 1400px;
+    margin-left: 500px;
+    height: 800px;
+    margin-top: -50px;
+    align-items: center;
+}
+
+.Subtitle {
+    font-family: Lato;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9499c3;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 200px;
+    display: flex;
+}
+
+.Sign_select {
+    height: 36px;
+    width: 160px;
+    border-radius: 5px;
+    color: #9499c3;
+    background-color: white;
+    font-size: 27px;
+    margin-left: 200px;
+    display: flex;
+}
+
+.Next {
+    margin-left: 400px;
+    margin-top: 60px;
+    padding: 5px 40px;
+}
+
+.circle {
+    width: 176px;
+    height: 190px;
+    border-radius: 50%;
+    border: dashed white;
+}
+
+.prev {
+    padding: 5px 40px;
+    margin-top: -170px;
+    display: flex;
+    float: left;
+}
+
+.color {
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    border: 2px dashed white;
+    margin-top: 50px;
+    Opacity: 70%;
+    margin-left: 180px;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.color1 {
+    width: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 176px;
+    border-radius: 50%;
+    border: 2px dashed white;
+    color: white;
+    font-size: 12px;
+    margin-top: 50px;
+    Opacity: 70%;
+    margin-left: 70px;
+    text-align: center;
+}
+
+.inline {
+    display: flex;
+}
+
+.description-container {
+    display: flex;
+    width: 700px;
+    margin-left: 800px;
+}
+
+.description {
+    color: white;
+    font-size: 48px;
+    margin-top: 150px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 100%;
 }
